@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "help.gtm/gtm-help",
+  "title": "gtm.help",
+  "description": "Your go-to-market plan, plays and opportunities from gtm.help, inside any AI agent.",
+  "websiteUrl": "https://gtm.help/for-agents",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gtm.help/mcp"
+    }
+  ]
+}

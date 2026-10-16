@@ -1,0 +1,332 @@
+{
+  "serverInfo": {
+    "name": "gtm.help",
+    "version": "1.0.0"
+  },
+  "description": "Your go-to-market plan, plays and opportunities from gtm.help, inside any AI agent.",
+  "websiteUrl": "https://gtm.help/for-agents",
+  "authentication": {
+    "required": true,
+    "schemes": [
+      "oauth2"
+    ]
+  },
+  "tools": [
+    {
+      "name": "analyze_site",
+      "title": "Analyse any site",
+      "description": "Give it any website and get three high-leverage growth plays back, costed and explained. Free for anyone connected.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Website URL to analyse"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "annotations": {
+        "title": "Analyse any site",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_workspaces",
+      "title": "List workspaces",
+      "description": "Every business on your account with its website, goal, stage and budget.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "annotations": {
+        "title": "List workspaces",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "get_business",
+      "title": "Know the business",
+      "description": "The full profile: audience, competitors, what has been tried and every note you have stored.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id"
+        ]
+      },
+      "annotations": {
+        "title": "Know the business",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "get_plan",
+      "title": "Read your plan",
+      "description": "The ranked, costed growth plays for a workspace, in the order to work them.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id"
+        ]
+      },
+      "annotations": {
+        "title": "Read your plan",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "get_play",
+      "title": "Open one play",
+      "description": "Everything about a single play: the steps, the tools, the budget and the metric.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "play_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "play_id"
+        ]
+      },
+      "annotations": {
+        "title": "Open one play",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "update_play_status",
+      "title": "Move a play",
+      "description": "Start, park, skip, reopen or finish a play, on the same board you see in the app.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "play_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "play_id",
+          "status"
+        ]
+      },
+      "annotations": {
+        "title": "Move a play",
+        "readOnlyHint": false,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "complete_play",
+      "title": "Mark work shipped",
+      "description": "The quick shortcut for a finished play; the next one moves up.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "play_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "play_id"
+        ]
+      },
+      "annotations": {
+        "title": "Mark work shipped",
+        "readOnlyHint": false,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "add_business_note",
+      "title": "Add context",
+      "description": "Store a finding, a number or an idea so the plan remembers it.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id",
+          "note"
+        ]
+      },
+      "annotations": {
+        "title": "Add context",
+        "readOnlyHint": false,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "share_recap",
+      "title": "Share a recap",
+      "description": "Make a public progress card to paste into a report, a post or a team chat.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id"
+        ]
+      },
+      "annotations": {
+        "title": "Share a recap",
+        "readOnlyHint": false,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_opportunities",
+      "title": "Conversations worth answering",
+      "description": "The Reddit threads, LinkedIn posts and X replies your agents ranked, by fit and how hot they are.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id"
+        ]
+      },
+      "annotations": {
+        "title": "Conversations worth answering",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "draft_reply",
+      "title": "Draft a reply",
+      "description": "An answer written in your voice with the link to post it at. You post it; gtm.help never does.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "opportunity_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "opportunity_id"
+        ]
+      },
+      "annotations": {
+        "title": "Draft a reply",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "update_opportunity",
+      "title": "Close the loop",
+      "description": "Record a conversation as replied, ignored or snoozed so it stops coming back.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "opportunity_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "opportunity_id",
+          "status"
+        ]
+      },
+      "annotations": {
+        "title": "Close the loop",
+        "readOnlyHint": false,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "update_watchlist",
+      "title": "Tune what is watched",
+      "description": "Read or change the keywords, topics, competitors, people and subreddits being watched.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "workspace_id"
+        ]
+      },
+      "annotations": {
+        "title": "Tune what is watched",
+        "readOnlyHint": false,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_integrations",
+      "title": "Check connected tools",
+      "description": "Which tools are connected, whether they are healthy, and their latest synced numbers.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "workspace_id": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "annotations": {
+        "title": "Check connected tools",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    },
+    {
+      "name": "list_invoices",
+      "title": "Billing history",
+      "description": "Invoices, tax and receipt links, for your own account only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "annotations": {
+        "title": "Billing history",
+        "readOnlyHint": true,
+        "destructiveHint": false
+      }
+    }
+  ],
+  "resources": [],
+  "prompts": []
+}

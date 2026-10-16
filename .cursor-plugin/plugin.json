@@ -1,0 +1,20 @@
+{
+  "name": "gtm-help",
+  "version": "1.0.0",
+  "description": "gtm.help growth plan inside Cursor: analyse any site, read your ranked plays, move them and draft replies to buyer conversations (OAuth).",
+  "author": {
+    "name": "gtm.help (MRGN Ventures Ltd)",
+    "email": "team@gtm.help"
+  },
+  "homepage": "https://gtm.help/for-agents",
+  "repository": "https://github.com/consultilycom-lang/gtm-help-mcp",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "growth",
+    "go-to-market",
+    "seo",
+    "mcp"
+  ],
+  "logo": "assets/logo.png"
+}
