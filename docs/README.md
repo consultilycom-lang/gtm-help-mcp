@@ -11,7 +11,7 @@ Connect the hosted gtm.help MCP server (`https://gtm.help/mcp`, Streamable HTTP,
 | ChatGPT | [chatgpt.md](chatgpt.md) |
 | Lovable | [lovable.md](lovable.md) |
 
-**Before you start:** `analyze_site` works for anyone who connects. Reading and working your own plan and plays needs a gtm.help subscription: $29/month, or $243.60 billed once a year, with a 7-day free trial (card required). Start at https://gtm.help/start.
+**Before you start:** `analyze_site` works for anyone who connects. Reading and working your own plan and plays needs a gtm.help subscription: $97/month, or $975 billed once a year ($81.25/mo effective), with a 7-day free trial (card required). Start at https://gtm.help/start.
 
 Every guide was checked against the client's official documentation on 16 October 2026. Client menus change often. If a step looks different, follow the linked official page.
 
