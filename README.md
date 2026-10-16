@@ -7,7 +7,7 @@ Your go-to-market plan, plays and buyer conversations from [gtm.help](https://gt
 - **Endpoint:** `https://gtm.help/mcp`
 - **Transport:** Streamable HTTP (remote, nothing to install)
 - **Auth:** OAuth 2.1. Your client opens a gtm.help sign-in window on first use. No API key. Your agent acts as you and only sees your own workspaces.
-- **Try it:** `analyze_site` works for anyone who connects. Reading and working your own plan needs a gtm.help subscription: $29/month or $243.60 billed yearly, 7-day free trial (card required).
+- **Try it:** `analyze_site` works for anyone who connects. Reading and working your own plan needs a gtm.help subscription: Growth $97/month or $975/year billed yearly ($81.25/mo effective), 7-day free trial (card required). Agency 10 is $775/month for 10 businesses; Agency 25 is $1,950/month for 25 businesses.
 - **Never posts for you:** agents draft replies; you post them yourself.
 
 **Step-by-step install guides:** [docs/](docs/README.md) for [Claude](docs/claude.md) · [Cursor](docs/cursor.md) · [VS Code](docs/vscode.md) · [Windsurf](docs/windsurf.md) · [ChatGPT](docs/chatgpt.md) · [Lovable](docs/lovable.md). More at https://gtm.help/for-agents
