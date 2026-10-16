@@ -1,0 +1,10 @@
+{
+  "name": "gtm-help",
+  "version": "1.0.0",
+  "description": "gtm.help remote MCP server: read and act on a ranked growth plan of plays, and draft replies to Reddit, LinkedIn and X conversations. Sign in with your gtm.help account (OAuth).",
+  "mcpServers": {
+    "gtm-help": {
+      "httpUrl": "https://gtm.help/mcp"
+    }
+  }
+}

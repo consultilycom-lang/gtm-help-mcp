@@ -65,6 +65,12 @@ Settings → MCP → enable `gtm-help` and sign in. [Guide](https://gtm.help/for
 ```
 [Guide](https://gtm.help/for-agents/windsurf)
 
+### Gemini CLI
+```bash
+gemini extensions install https://github.com/consultilycom-lang/gtm-help-mcp
+```
+Then run `/mcp auth gtm-help` in Gemini CLI to sign in.
+
 ### ChatGPT
 Settings → Connectors → Create (developer mode, depending on plan) → transport Streamable HTTP, URL `https://gtm.help/mcp`, auth OAuth (leave API key blank). [Guide](https://gtm.help/for-agents/chatgpt)
 
