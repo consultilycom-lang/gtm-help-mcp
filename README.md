@@ -14,7 +14,7 @@ Full guides: https://gtm.help/for-agents
 
 > This repository contains documentation and client configuration only. The server is hosted by gtm.help; its source code is not public.
 
-## Tools (15)
+## Tools (16)
 
 | Tool | What it does |
 |---|---|
