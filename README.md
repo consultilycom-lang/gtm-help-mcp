@@ -7,10 +7,10 @@ Your go-to-market plan, plays and buyer conversations from [gtm.help](https://gt
 - **Endpoint:** `https://gtm.help/mcp`
 - **Transport:** Streamable HTTP (remote, nothing to install)
 - **Auth:** OAuth 2.1. Your client opens a gtm.help sign-in window on first use. No API key. Your agent acts as you and only sees your own workspaces.
-- **Free to try:** `analyze_site` works for anyone who connects. Reading and updating your own plan needs an active gtm.help plan (7-day free trial).
+- **Try it:** `analyze_site` works for anyone who connects. Reading and working your own plan needs a gtm.help subscription: $29/month or $243.60 billed yearly, 7-day free trial (card required).
 - **Never posts for you:** agents draft replies; you post them yourself.
 
-Full guides: https://gtm.help/for-agents
+**Step-by-step install guides:** [docs/](docs/README.md) for [Claude](docs/claude.md) · [Cursor](docs/cursor.md) · [VS Code](docs/vscode.md) · [Windsurf](docs/windsurf.md) · [ChatGPT](docs/chatgpt.md) · [Lovable](docs/lovable.md). More at https://gtm.help/for-agents
 
 > This repository contains documentation and client configuration only. The server is hosted by gtm.help; its source code is not public.
 
@@ -24,6 +24,7 @@ Full guides: https://gtm.help/for-agents
 | `get_plan` | The ranked, costed growth plays for a workspace, in the order to work them. |
 | `get_play` | Everything about a single play: the steps, the tools, the budget and the metric. |
 | `update_play_status` | Start, park, skip, reopen or finish a play, on the same board you see in the app. |
+| `submit_play_draft` | Hand back finished work for a play (a draft post, brief or page) so it is saved against the play. |
 | `complete_play` | The quick shortcut for a finished play; the next one moves up. |
 | `add_business_note` | Store a finding, a number or an idea so the plan remembers it. |
 | `share_recap` | Make a public progress card to paste into a report, a post or a team chat. |
@@ -35,8 +36,10 @@ Full guides: https://gtm.help/for-agents
 | `list_invoices` | Invoices, tax and receipt links, for your own account only. |
 ## Install
 
+Full step-by-step guides live in [docs/](docs/README.md). Quick versions:
+
 ### Claude (claude.ai / Claude Desktop)
-Settings → Connectors → **Add custom connector** → name `gtm.help`, URL `https://gtm.help/mcp` → sign in. [Guide](https://gtm.help/for-agents/claude)
+Customize → Connectors → **+ Add → Add custom connector** → name `gtm.help`, URL `https://gtm.help/mcp` → Connect and sign in. [Guide](docs/claude.md)
 
 ### Claude Code
 ```bash
@@ -49,21 +52,21 @@ Then run `/mcp` to complete sign-in.
 ```json
 { "mcpServers": { "gtm-help": { "url": "https://gtm.help/mcp" } } }
 ```
-Settings → MCP → enable `gtm-help` and sign in. [Guide](https://gtm.help/for-agents/cursor)
+[Guide](docs/cursor.md)
 
 ### VS Code (Copilot agent mode)
-`.vscode/mcp.json`:
+`.mcp.json` at the workspace root (or `~/.copilot/mcp-config.json`):
 ```json
-{ "servers": { "gtm-help": { "type": "http", "url": "https://gtm.help/mcp" } } }
+{ "mcpServers": { "gtm-help": { "type": "http", "url": "https://gtm.help/mcp" } } }
 ```
-[Guide](https://gtm.help/for-agents/vscode)
+Legacy `.vscode/mcp.json` uses `"servers"` instead of `"mcpServers"`. [Guide](docs/vscode.md)
 
-### Windsurf
-`~/.codeium/windsurf/mcp_config.json`:
+### Windsurf / Devin Desktop
+Cascade panel → … → Open MCP config file:
 ```json
 { "mcpServers": { "gtm-help": { "serverUrl": "https://gtm.help/mcp" } } }
 ```
-[Guide](https://gtm.help/for-agents/windsurf)
+[Guide](docs/windsurf.md)
 
 ### Gemini CLI
 ```bash
@@ -72,7 +75,10 @@ gemini extensions install https://github.com/consultilycom-lang/gtm-help-mcp
 Then run `/mcp auth gtm-help` in Gemini CLI to sign in.
 
 ### ChatGPT
-Settings → Connectors → Create (developer mode, depending on plan) → transport Streamable HTTP, URL `https://gtm.help/mcp`, auth OAuth (leave API key blank). [Guide](https://gtm.help/for-agents/chatgpt)
+Plugins → **+ → Add custom MCP server** → URL `https://gtm.help/mcp`, OAuth → Create as a plugin (availability depends on plan and workspace policy). [Guide](docs/chatgpt.md)
+
+### Lovable
+Connectors → **+ → MCP server** → URL `https://gtm.help/mcp`, OAuth → Add & authorize. [Guide](docs/lovable.md)
 
 ### Codex CLI
 `~/.codex/config.toml`: see the [Codex guide](https://gtm.help/for-agents/codex).
@@ -90,4 +96,4 @@ Settings → Connectors → Create (developer mode, depending on plan) → trans
 - `assets/logo.png`: logo
 
 ## Support
-team@gtm.help · https://gtm.help/contact · [Privacy](https://gtm.help/privacy) · [Terms](https://gtm.help/terms)
+team@gtm.help · [Help](https://gtm.help/help) · [Privacy & security](https://gtm.help/security) · [DPA](https://gtm.help/dpa) · [Refunds](https://gtm.help/refunds) · [Terms](https://gtm.help/terms)
